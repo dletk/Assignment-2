@@ -1,0 +1,12 @@
+#!/bin/sh
+'''exec' "/Users/maianh09102000/Downloads/AIC/University/Bryn Mawr/Computer Science/Intro to Python/venv/bin/python3" "$0" "$@"
+' '''
+# -*- coding: utf-8 -*-
+import re
+import sys
+
+from pylint import run_pylint
+
+if __name__ == '__main__':
+    sys.argv[0] = re.sub(r'(-script\.pyw?|\.exe)?$', '', sys.argv[0])
+    sys.exit(run_pylint())
